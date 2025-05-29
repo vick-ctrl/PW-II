@@ -3,7 +3,6 @@
 
   
    if($_SERVER["REQUEST_METHOD"] == "GET"){
-    
     $id = isset($_GET['id']) ? $_GET['id'] : exit();
 
 if(empty($id)){
@@ -38,11 +37,13 @@ if(empty($id)){
         echo "favor digitar a senha !";
         exit();
     }
-    $stmt = $pdo->prepare('UPDATE usuario SET username = :username,password = :password WHERE id = :id');
-    stmt->bindParam(':id',$id);
-    stmt->bindParam(':username',$username);
-    stmt->bindParam(':password',$password);
-    stmt->execute();
+  $stmt = $pdo->prepare('UPDATE usuario SET username = :username,password = :password WHERE id = :id');
+    $stmt->bindParam(':id',$id);
+    $stmt->bindParam(':username',$username);
+    $stmt->bindParam(':password',$password);
+    $stmt->execute();
+
+    Header('Location: read.php');
 
    };
 

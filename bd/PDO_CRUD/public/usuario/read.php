@@ -1,5 +1,9 @@
 <?php
+    include '../../includes/header.php';
+   include '../../includes/menu.php';
    include '../../config/connection.php';
+
+
    
    $stmt = $pdo -> query('SELECT * FROM usuario');
    $usuarios = $stmt -> fetchAll();
@@ -14,7 +18,10 @@
    <a href="http://localhost/PW-II/bd/PDO_CRUD/public/usuario/delete.php?id=<?php echo $user['id'];?>" >remover</a>
    <a href="http://localhost/PW-II/bd/PDO_CRUD/public/usuario/update.php?id=<?php echo $user['id'];?>" >editar</a>
    <hr>
-<?php } ?>
+<?php } 
+?>
+
+<?php include '../../includes/footer.php';?>
 
 
 
