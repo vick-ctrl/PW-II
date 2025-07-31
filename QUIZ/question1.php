@@ -34,23 +34,24 @@
                 </div>
                 <button type="submit" class="btn btn secondary">Verificar</button>
             </form>
+     
             <?php
-            if(isset($_POST['question1'])){
-                if(empty($_POST['question1'])){
-                    echo '<div class="alert alert-warning" role="alert">Escolha uma alternativa por favor !</div>;'
-                }
-                if(!empty($_POST['question1'])){
-                    if($_POST['question1'] == 'resp3'){
-                        echo '<div class="alert  alert-success" role="alert">Parabens você acertou!</div>;'  
-                      
+                if (isset($_POST['question1'])) {
+                    if(empty($_POST['question1'])){
+                        echo'<div class="alert alert-warning" role="alert">Favor escolher uma alternativa <div/>';
                     }
-                }
-                if($_POST['question1'] != 'resp3'){
-                    echo '<div class="alert alert-danger" role="alert">Você errou!</div>;'   
-                }
 
-            }
-            ?>
+                   if(!empty($_POST['question1'])){
+                    if ($_POST['question1'] == 'resp1') {
+                        echo'<div class="alert alert-success" role="alert"> Você acertou! <a href="question2.php">Avançar<a/> <div/>';
+                        // header('Location:')
+                    }
+                    if ($_POST['question1'] != 'resp1') {
+                        echo'<div class="alert alert-warning" role="alert"> Você errou <div/>';
+                    }   
+                  }
+                }
+               ?>
         </div>
     </div>
   </div>
