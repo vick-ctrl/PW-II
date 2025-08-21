@@ -1,6 +1,6 @@
 <?php 
 $host = 'localhost'; 
-$datebase = 'ebooks'; 
+$datebase = 'sistema_ebooks'; 
 $user = 'root'; 
 $password = ''; 
 

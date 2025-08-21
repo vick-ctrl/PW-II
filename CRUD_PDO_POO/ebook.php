@@ -1,5 +1,5 @@
 <?php
-class Editora{
+class Ebook{
     private $id;
     private $titulo;
     private $descricao;
@@ -23,15 +23,45 @@ public function __construct($titulo,$descricao,$isbn,$data_publicacao,$preco,$id
 
 }
 
-public function inserir(){ }
+public function inserir(){
+    $stmt = $pdo->prepare("INSERT INTO ebook (titulo, descricao, isbn,data_publicacao, preco, idioma, foto  ) VALUES (:titulo, :descricao, :isbn, :data_publicacao, :preco, :idioma, :foto)");
+    $stmt->bindParam(':titulo', $titulo); 
+   $stmt->bindParam(':descricao', $descricao); 
+   $stmt->bindParam(':isbn', $isbn);
+   $stmt->bindParam(':data_publicacao', $data_publicacao);
+   $stmt->bindParam(':preco', $preco);
+   $stmt->bindParam(':idioma', $idioma);
+   $stmt->bindParam(':foto', $foto);
+    $stmt->execute();
+}
+public function buscar($id){ 
+    $stmt = $pdo->query("SELECT * FROM ebook WHERE id = $id");
+	$ebooks= $stmt->fetchAll();
 
-public function buscar($id){ }
+}
 
-public function buscarTodos(){}
+public function buscarTodos(){
+    $stmt = $pdo->query("SELECT * FROM ebook");
+	$ebooks= $stmt->fetchAll();
+}
 
-public function atualizar($id){}
+public function atualizar($id,$titulo,$descricao,$isbn,$data_publicacao,$preco,$idioma,$foto){
+    $stmt = $pdo->prepare("UPDATE ebook SET titulo = :titulo , descricao = :descricao , isbn= :isbn , data_publicacao = :data_publicacao , preco = :preco , idioma = :idioma ,foto = :foto WHERE id = :id");
+    $stmt->bindParam(':titulo', $titulo);
+    $stmt->bindParam(':descricao', $descricao);
+    $stmt->bindParam(':isbn', $isbn);
+    $stmt->bindParam(':data_publicacao', $data_publicacao);
+    $stmt->bindParam(':preco', $preco);
+    $stmt->bindParam(':idioma', $idioma);
+    $stmt->bindParam(':foto', $foto);
+    $stmt->execute();
+}
 
-public function deletar($id){}
+public function deletar($id){
+    $stmt = $pdo->prepare('DELETE FROM ebook WHERE id = :id');
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
 
 
 
