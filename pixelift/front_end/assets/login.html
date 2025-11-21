@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOGIN</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Seu CSS -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- NAVBAR FULL-WIDTH E MAIOR -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="principal.html">Inicial</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="posts.html">posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="noticias.html">notícias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- TÍTULO CENTRALIZADO -->
+    <h1 class="titulo-login text-center mt-4">área de login</h1>
+
+    <!-- CARD DE LOGIN CENTRALIZADO -->
+    <div class="container d-flex justify-content-center align-items-center login-container">
+      <div class="login-card card shadow-lg">
+        <div class="card-body text-center">
+          <h3 class="mb-4">Informe :</h3>
+
+          <form>
+            <div class="mb-3 text-start">
+              <label class="form-label">Usuário</label>
+              <input type="text" class="form-control" placeholder="Digite seu usuário">
+            </div>
+
+            <div class="mb-3 text-start">
+              <label class="form-label">Senha</label>
+              <input type="password" class="form-control" placeholder="Digite sua senha">
+            </div>
+
+            <button class="btn btn-dark w-100 mt-3">Entrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

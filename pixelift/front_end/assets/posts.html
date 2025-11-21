@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POSTS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Seu CSS -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="principal.html">Inicial</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="posts.html">posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="noticias.html">notícias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container mt-4">
+      <!-- CAIXA DE CRIAÇÃO DE POST -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="post-box mb-4">
+            <img src="https://i.pravatar.cc/50?img=12" class="card-profile-img">
+            <input type="text" class="post-input" placeholder="O que você está pensando?">
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTS FAKE DE PESSOAS DA TECNOLOGIA -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-8">
+
+          <!-- POST 1 -->
+          <div class="card post-card p-3">
+            <div class="d-flex align-items-center mb-2">
+              <img src="https://i.pravatar.cc/50?img=5" class="card-profile-img">
+              <div>
+                <h6 class="m-0">Ana DevOps</h6>
+                <small class="text-muted">há 2 horas</small>
+              </div>
+            </div>
+            <p>“Hoje finalizei a automação de deploy com GitHub Actions. Cada dia mais apaixonada por CI/CD!” 🚀</p>
+          </div>
+
+          <!-- POST 2 -->
+          <div class="card post-card p-3">
+            <div class="d-flex align-items-center mb-2">
+              <img src="https://i.pravatar.cc/50?img=22" class="card-profile-img">
+              <div>
+                <h6 class="m-0">Carlos Full Stack</h6>
+                <small class="text-muted">há 5 horas</small>
+              </div>
+            </div>
+            <p>“Se eu ganhar um real para cada bug que aparece do nada, já estaria milionário.” 😭</p>
+          </div>
+
+          <!-- POST 3 -->
+          <div class="card post-card p-3">
+            <div class="d-flex align-items-center mb-2">
+              <img src="https://i.pravatar.cc/50?img=45" class="card-profile-img">
+              <div>
+                <h6 class="m-0">Juliana UX Designer</h6>
+                <small class="text-muted">há 1 dia</small>
+              </div>
+            </div>
+            <p>“Refiz o layout 4 vezes hoje. Cliente aprovou a primeira versão. Normal.” 🎨✨</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
